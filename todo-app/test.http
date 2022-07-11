@@ -1,0 +1,114 @@
+### Sign-up
+
+POST http://localhost:8000/auth/sign-up
+Content-Type: application/json
+
+{
+  "name": "German",
+  "username": "Bogatov",
+  "password": "23Bogatov"
+}
+
+### Sign-in
+POST http://localhost:8000/auth/sign-in
+Content-Type: application/json
+
+{
+  "username": "Bogatov",
+  "password": "23Bogatov"
+}
+
+### create Lists
+POST http://localhost:8000/api/lists
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0MjIzNjIsImlhdCI6MTY1NzM3OTE2MiwidXNlcl9pZCI6MX0.qSXRRq_PupSWQ3qF_lERYabXPC5L-2NeE_S5Z8cscbY
+
+{
+"title": "какой-то важный заголовок!",
+  "description": "серьезное описание!"
+}
+
+### get all Lists
+GET http://localhost:8000/api/lists
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0MjIzNjIsImlhdCI6MTY1NzM3OTE2MiwidXNlcl9pZCI6MX0.qSXRRq_PupSWQ3qF_lERYabXPC5L-2NeE_S5Z8cscbY
+
+{
+  "title": "какой-то важный заголовок!",
+  "description": "серьезное описание!"
+}
+
+### get List by id
+GET http://localhost:8000/api/lists/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0ODQ4NjcsImlhdCI6MTY1NzQ0MTY2NywidXNlcl9pZCI6MX0.-ISfv5gRmFLjqgcjIKPxZBNMSlF1FDv-Lho0K5HSRkg
+
+{
+}
+
+### delete List by id
+DELETE http://localhost:8000/api/lists/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0MjIzNjIsImlhdCI6MTY1NzM3OTE2MiwidXNlcl9pZCI6MX0.qSXRRq_PupSWQ3qF_lERYabXPC5L-2NeE_S5Z8cscbY
+
+{
+  "title": "какой-то важный заголовок!",
+  "description": "серьезное описание!"
+}
+
+### update List by id
+PUT http://localhost:8000/api/lists/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0ODQ4NjcsImlhdCI6MTY1NzQ0MTY2NywidXNlcl9pZCI6MX0.-ISfv5gRmFLjqgcjIKPxZBNMSlF1FDv-Lho0K5HSRkg
+
+{
+  "title": "измененный заголовок!",
+  "description": "измененнное описание!"
+}
+
+
+
+### create item
+POST http://localhost:8000/api/lists/2/items
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0ODQ4NjcsImlhdCI6MTY1NzQ0MTY2NywidXNlcl9pZCI6MX0.-ISfv5gRmFLjqgcjIKPxZBNMSlF1FDv-Lho0K5HSRkg
+
+{
+  "title": "Банан",
+  "description": "вкусный спелый"
+}
+
+### get all item
+GET http://localhost:8000/api/lists/2/items
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0ODQ4NjcsImlhdCI6MTY1NzQ0MTY2NywidXNlcl9pZCI6MX0.-ISfv5gRmFLjqgcjIKPxZBNMSlF1FDv-Lho0K5HSRkg
+
+{
+}
+
+### get items by id
+GET http://localhost:8000/api/items/6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0ODQ4NjcsImlhdCI6MTY1NzQ0MTY2NywidXNlcl9pZCI6MX0.-ISfv5gRmFLjqgcjIKPxZBNMSlF1FDv-Lho0K5HSRkg
+
+{
+}
+
+### delete items by id
+DELETE http://localhost:8000/api/items/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0ODQ4NjcsImlhdCI6MTY1NzQ0MTY2NywidXNlcl9pZCI6MX0.-ISfv5gRmFLjqgcjIKPxZBNMSlF1FDv-Lho0K5HSRkg
+
+{
+}
+
+### update List by id
+PUT http://localhost:8000/api/items/6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0ODQ4NjcsImlhdCI6MTY1NzQ0MTY2NywidXNlcl9pZCI6MX0.-ISfv5gRmFLjqgcjIKPxZBNMSlF1FDv-Lho0K5HSRkg
+
+{
+  "title": "измененный заголовок!",
+  "description": "измененнное описание!",
+  "done": true
+}
